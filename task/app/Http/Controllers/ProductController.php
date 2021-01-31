@@ -113,7 +113,9 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
 
+    
         $image = "";
+
         if ($request->hasFile('image')) {
 
             $photo  = date('Ymdhis') . '.' . $request->file('image')->getClientOriginalExtension();
